@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F7F7F7"
+    android:orientation="vertical"
+    tools:context=".Main">
+
+
+    <LinearLayout
+        android:id="@+id/layoutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F9F9F9"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="50dp"
+        android:paddingBottom="20dp">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/beltitle" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sliderLayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/layoutTitle"
+        android:layout_marginTop="50dp">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pagerMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true">
+
+        </androidx.viewpager.widget.ViewPager>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bosluk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/sliderLayout"
+        android:layout_marginTop="5dp"
+        android:gravity="top"
+        android:orientation="horizontal">
+
+        <com.viewpagerindicator.CirclePageIndicator
+            android:id="@+id/indicatorMain"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            app:centered="true"
+            app:fillColor="#3A608E"
+            app:pageColor="#3000A6C0"
+            app:snap="false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+
+
+        <Button
+            android:id="@+id/arac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="270dp"
+            android:backgroundTint="#3A608E"
+            android:gravity="center|left"
+            android:onClick="openArac"
+            android:text="Arac Cekme Sorgulama"
+            android:textAllCaps="false"
+            app:icon="@drawable/car" />
+
+        <Button
+            android:id="@+id/otopark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="270dp"
+            android:backgroundTint="#3A608E"
+            android:gravity="center|left"
+            android:onClick="openOtopark"
+            android:text="Otopark Doluluk Durumu"
+            android:textAllCaps="false"
+            app:icon="@drawable/park" />
+
+        <Button
+            android:id="@+id/profil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="270dp"
+            android:backgroundTint="#3A608E"
+            android:gravity="center_horizontal|left|center_vertical"
+            android:onClick="openProfil"
+            android:text="Yeni Profil Kayit"
+            android:textAllCaps="false"
+            app:icon="@drawable/profile" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
